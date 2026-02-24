@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    /* A soft gradient background looks more expensive than a flat color */
+    @apply bg-slate-50/50 text-slate-900 antialiased;
+    background-image: radial-gradient(at 0% 0%, rgba(20, 168, 0, 0.03) 0px, transparent 50%),
+                      radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.03) 0px, transparent 50%);
+  }
+}@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
